@@ -17,12 +17,12 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
 
-// ผู้ใช้ตัวอย่างฝั่ง Lecture: ผู้ดูแลระบบ (ADMIN)
 const NICKNAME = "Admin";
 const ROLE = "ADMIN";
 
 const items = [
   { title: "หน้าแรก", url: "/", icon: Home },
+  { title: "จัดการวิชาเรียน", url: "/admin/courses", icon: BookOpen },
   { title: "จัดการการลงทะเบียน", url: "/admin/enrollments", icon: BookOpen },
 ];
 

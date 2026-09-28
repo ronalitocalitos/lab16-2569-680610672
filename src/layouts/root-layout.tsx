@@ -1,13 +1,16 @@
 import { Outlet } from "react-router";
-
 import { AppSidebar } from "@/components/app-sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
 import { Separator } from "@/components/ui/separator";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+
+function Footer({ firstName, lastName, studentId }: { firstName: string; lastName: string; studentId: string }) {
+  return (
+    <footer className="border-t p-4 text-center text-xs text-muted-foreground">
+      จัดทำโดย {firstName} {lastName} รหัสนักศึกษา {studentId}
+    </footer>
+  );
+}
 
 export default function RootLayout() {
   return (
@@ -25,7 +28,7 @@ export default function RootLayout() {
         <main className="flex-1 p-4">
           <Outlet />
         </main>
-        <footer className="border-t p-4 text-center text-xs text-muted-foreground"></footer>
+        <Footer firstName="ณัฐนนท์" lastName="ยะสะวุฒิ" studentId="680610672" />
       </SidebarInset>
     </SidebarProvider>
   );
